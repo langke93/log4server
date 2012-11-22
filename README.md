@@ -14,6 +14,7 @@ log4j.logger.org.langke.core=INFO,rest-nettyserver
 2.客户端配置参考：doc/log4j.properties 
 主要就是把下列配置加到各个服务器的log4j.properties
 rootLogger加下SOCKET_CLIENT
+<pre>
 log4j.rootLogger=INFO,SOCKET_CLIENT
 
 #remote logging
@@ -21,4 +22,5 @@ log4j.appender.SOCKET_CLIENT = org.apache.log4j.net.SocketAppender
 log4j.appender.SOCKET_CLIENT.RemoteHost = log4server
 log4j.appender.SOCKET_CLIENT.Port = 5001
 log4j.appender.SOCKET_CLIENT.LocationInfo = true
+</pre>
 这里log4server是指向log4server服务器host,需要配置hosts文件，或者直接用ip
