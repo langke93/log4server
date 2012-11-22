@@ -1,3 +1,6 @@
+log4server
+===============
+
 log4server是个简单的日志收集服务，是使用log4j的SocketServer,用来收集分布式系统中的日志，方便集中日志查询、分析
 
 1.日志服务启动脚本bin/restart_server.sh
