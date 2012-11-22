@@ -1,0 +1,26 @@
+log.dir=../logs
+
+log4j.rootLogger=INFO,globalfile
+#log4j.rootCategory=INFO,globalfile
+log4j.appender.globalfile=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.globalfile.DatePattern='.'yyyy-MM-dd
+log4j.appender.globalfile.encoding=UTF-8
+log4j.appender.globalfile.File=${log.dir}/global.log
+log4j.appender.globalfile.layout=org.apache.log4j.PatternLayout
+log4j.appender.globalfile.layout.ConversionPattern=%d{ISO8601} %p %c: %m%n
+
+log4j.logger.org.langke.core=INFO,rest-nettyserver
+log4j.appender.rest-nettyserver=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.rest-nettyserver.DatePattern='.'yyyy-MM-dd
+log4j.appender.rest-nettyserver.encoding=UTF-8
+log4j.appender.rest-nettyserver.File=${log.dir}/rest-nettyserver.log
+log4j.appender.rest-nettyserver.layout=org.apache.log4j.PatternLayout
+log4j.appender.rest-nettyserver.layout.ConversionPattern=%d{ISO8601} %p %c: %m%n
+
+log4j.logger.org.langke.user=INFO,user
+log4j.appender.user=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.user.DatePattern='.'yyyy-MM-dd
+log4j.appender.user.encoding=UTF-8
+log4j.appender.user.File=${log.dir}/user.log
+log4j.appender.user.layout=org.apache.log4j.PatternLayout
+log4j.appender.user.layout.ConversionPattern=%d{ISO8601} %p %c: %m%n
